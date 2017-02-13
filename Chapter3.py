@@ -38,4 +38,19 @@ print(dogs)
 dogs.insert(2, 'bulldog')
 print(dogs)
 
+# Deleting items from a list
+
+# Deleting with the del command
+del dogs[0]
+print(dogs)
+
+# pop() method, If used without arguments, pops the last item in a list. If a list is popped and assigned a variable,
+#  returns the single popped value
+popped_dogs = dogs.pop(2)
+print(dogs)
+print(popped_dogs)
+
+# remove() method removes an item from a list using a value match
+dogs.remove('german shorthair')
+print(dogs)
 
