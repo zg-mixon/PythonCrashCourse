@@ -50,7 +50,89 @@ popped_dogs = dogs.pop(2)
 print(dogs)
 print(popped_dogs)
 
-# remove() method removes an item from a list using a value match
+# remove() method removes an item from a list using a value match. remove() only removes the first occurence of the
+# value in a list. If more than one occurence of the same value could exist in the list, looping is necessary.
 dogs.remove('german shorthair')
 print(dogs)
 
+# List exercises 3.4 - 3.7 (Specifically not using looping, hasn't been introduced in book.)
+# Guest List
+guests = ['Harrison Ford', 'Scooby Doo', 'Edward Elric']
+invitation1 = "Hello, " + guests[0] + "! You are cordially invited to a special dinner for the coolest peeops in the " \
+                                     "universe."
+invitation2 = "Hello, " + guests[1] + "! You are cordially invited to a special dinner for the coolest peeops in the " \
+                                     "universe."
+invitation3 = "Hello, " + guests[2] + "! You are cordially invited to a special dinner for the coolest peeops in the " \
+                                     "universe."
+
+print(invitation1)
+print(invitation2)
+print(invitation3)
+
+# Changing guest list
+guests.remove('Harrison Ford')
+uninvited_guest = "Harrison Ford"
+uninvitation_message = "We regret to inform you, " + uninvited_guest + ", that you are uninvited from the banquet. It " \
+                                                                       "totally isn't because you aren't cool " \
+                                                                       "enough, we just don't have space. *cough cough*"
+print(uninvitation_message)
+
+# More guests! A bigger dinner table is available
+table_message1 = "Hello " + guests[0] + "! We found a bigger dinner table, woohoo!! This means three more guests will" \
+                                        "be joining us for dinner! Harrison Ford is not reinvited."
+table_message2 = "Hello " + guests[1] + "! We found a bigger dinner table, woohoo!! This means three more guests will" \
+                                        "be joining us for dinner! Harrison Ford is not reinvited."
+print(table_message1)
+print(table_message2)
+
+# Adding new guests to beginning of list, middle of list and end of list. THIS COULD BE DONE SO MUCH BETTER WITH LOOPS.
+guests.insert(0, "Darth Vader")
+guests.insert(2, "Lelouche Vi Britania")
+guests.append("Garfield")
+
+new_invitation1 = "Hello honored guest, " + guests[0] + ". This is a resending of the invitation to the banquet for" \
+                                                        "the coolest people in the universe. We found more spaces " \
+                                                        "because we have a bigger table now."
+new_invitation2 = "Hello honored guest, " + guests[1] + ". This is a resending of the invitation to the banquet for" \
+                                                        "the coolest people in the universe. We found more spaces " \
+                                                        "because we have a bigger table now."
+new_invitation3 = "Hello honored guest, " + guests[2] + ". This is a resending of the invitation to the banquet for" \
+                                                        "the coolest people in the universe. We found more spaces " \
+                                                        "because we have a bigger table now."
+new_invitation4 = "Hello honored guest, " + guests[3] + ". This is a resending of the invitation to the banquet for" \
+                                                        "the coolest people in the universe. We found more spaces " \
+                                                        "because we have a bigger table now."
+new_invitation5 = "Hello honored guest, " + guests[4] + ". This is a resending of the invitation to the banquet for" \
+                                                        "the coolest people in the universe. We found more spaces " \
+                                                        "because we have a bigger table now."
+print(new_invitation1)
+print(new_invitation2)
+print(new_invitation3)
+print(new_invitation4)
+print(new_invitation5)
+
+# Popping three people out of the list, table isn't arriving in time for the banquet. We suck at parties
+uninvited_guest1 = guests.pop()
+uninvited_guest2 = guests.pop()
+uninvited_guest3 = guests.pop()
+uninvitation_message1 = "Hello! We regret to inform you that we're awful at planning and the aforementioned bigger" \
+                        "table won't be available by the time the banquet rolls around. Sorry " \
+                        + uninvited_guest1 + ", we suck."
+uninvitation_message2 = "Hello! We regret to inform you that we're awful at planning and the aforementioned bigger" \
+                        "table won't be available by the time the banquet rolls around. Sorry " \
+                        + uninvited_guest2 + ", we suck."
+uninvitation_message3 = "Hello! We regret to inform you that we're awful at planning and the aforementioned bigger" \
+                        "table won't be available by the time the banquet rolls around. Sorry " \
+                        + uninvited_guest3 + ", we suck."
+final_invitation_message1 = "Hello " + guests[0] + "! Here is your final invitation to the banquet!"
+final_invitation_message2 = "Hello " + guests[1] + "! Here is your final invitation to the banquet!"
+print(uninvitation_message1)
+print(uninvitation_message2)
+print(uninvitation_message3)
+print(final_invitation_message1)
+print(final_invitation_message2)
+del guests[0]
+del guests[1]
+print(guests)
+
+# End of this silly ring around the rosie with guests. Emptied list at end to finish out program
