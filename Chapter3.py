@@ -132,7 +132,46 @@ print(uninvitation_message3)
 print(final_invitation_message1)
 print(final_invitation_message2)
 del guests[0]
-del guests[1]
+del guests[0]
 print(guests)
 
 # End of this silly ring around the rosie with guests. Emptied list at end to finish out program
+
+# Organizing lists
+
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+
+# sort() permanently sorts a list in alphabetical and alphanumerical order
+# cars.sort()
+# print(cars)
+# cars.sort(reverse=True)
+# print(cars)
+
+# sorted() sorts a list temporarily for immediate use by taking a list as an argument
+print("Here is the original list:")
+print(cars)
+print("\nHere is the sorted list:")
+print(sorted(cars))
+print("\nHere is the original list again:")
+print(cars)
+
+# reverse() is a function to sort a list in reverse order, but not alphabetically or alphanumerically, reverse
+# of the original order
+cars.reverse()
+print(cars)
+
+# len() is a method used to find the length of a list based on the number of values in a list. Not 0 indexed
+print(len(cars))
+
+# Common errors when working with lists
+
+# The below returns an error as there are only 4 values in cars[], meaning the highest index is 3
+# print(cars[4])
+
+# Simple solution to try to find the last item in an index below by using negative index numbers
+print(cars[-1])
+
+# The only time using negative index values will cause an error is with an empty list, as below
+# cars = []
+# print(cars[-1])
+
