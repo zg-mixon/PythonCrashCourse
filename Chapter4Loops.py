@@ -96,3 +96,56 @@ for cube in cubed:
     print(cube)
 '''
 
+# Working with portions of a list. Colon with starting index on the left and end of index position -1 desired on right
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[0:3])
+
+# Example of non-0 index starting slice
+print(players[1:4])
+
+# If the index is left off of the left hand side of the colon, starts the slice from the beginning of the index
+print(players[:4])
+
+# If you want to take a slice starting from the end of the list, specify the ending index counting backwards with the
+# right hand side empty. The below ends at index 2, starting from the end of the list printing out all in between and
+# inclusive of two
+print(players[2:])
+
+# If you just want a certain amount of items in a list from the end, you can use negative index numbers. Below produces
+# the last three items in a list
+print(players[-3:])
+
+# Looping through a slice
+print("Here are the first three players on my roster:")
+for player in players[:3]:
+    print("\t" + player.title())
+
+# Copying a list. To copy another list, set your new list equal to an index valueless slice of the list you're trying
+# to copy
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:]
+
+print(my_foods)
+print(friend_foods)
+
+my_foods.append('canoli')
+friend_foods.append('cat food')
+
+print(my_foods)
+print(friend_foods)
+
+# Tuples. Immutable (non-changeable lists) syntax is: variable_name = (value, value, ...)
+dimensions = (200, 50)
+print(dimensions[0])
+print(dimensions[1])
+
+# Tuples can be iterated over and its values used just like a list
+for dimension in dimensions:
+    print(dimension)
+
+# While you can't modify a tuple, you can write over a tuple by using the same variable name and setting it equal to a
+# new value
+dimensions = (400, 100)
+for dimension in dimensions:
+    print(dimension)
+
